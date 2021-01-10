@@ -1,0 +1,10 @@
+#Question {
+    font-weight: 900;
+    margin-left: 200px;
+    margin-right: 600px;
+}
+
+.d-grid button {
+    text-align: left;
+    background-color: purple;
+}
