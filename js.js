@@ -74,31 +74,49 @@ function startGame() {
     choiceTwo.innerText = questionArray[0].choice2;
     choiceThree.innerText = questionArray[0].choice3;
     choiceFour.innerText = questionArray[0].choice4;
-    console.log(questionListing);
-    console.log(choiceOne);
-    console.log(choiceTwo);
-    console.log(choiceThree);
-    console.log(choiceFour);
+   console.log(document.getElementById("choiceOpton1").clicked);
+   // == true) {
+     //   alert("oh yea!")
+   // }
+
+    //choiceOne.addEventListener("click", function() {
+       // document.body.children[4].childNodes[6].children[0].style.background = "Red";
+    //})
+    // console.log(questionListing);
+    // console.log(choiceOne);
+    // console.log(choiceTwo);
+    // console.log(choiceThree);
+    // console.log(choiceFour);
 // if btn is clicked then go through loop
 //const buttonClicks = document.getElementById("#buttons");
     buttonClicks.addEventListener("click", function() {
         //for (var i = 1; i<questionArray.length; i++) {
-            questionListing.innerText = questionArray[i].question;
-            choiceOne.innerText = questionArray[i].choice1;
-            choiceTwo.innerText = questionArray[i].choice2;
-            choiceThree.innerText = questionArray[i].choice3;
-            choiceFour.innerText = questionArray[i].choice4;
-            i++;
-            console.log(questionListing);
-            console.log(choiceOne);
-            console.log(choiceTwo);
-            console.log(choiceThree);
-            console.log(choiceFour);
+        questionListing.innerText = questionArray[i].question;
+        choiceOne.innerText = questionArray[i].choice1;
+        choiceTwo.innerText = questionArray[i].choice2;
+        choiceThree.innerText = questionArray[i].choice3;
+        choiceFour.innerText = questionArray[i].choice4;
+        i++;
+
+        //}
+       
+
+           // ))
+            // if button click = questionArray[i].answer then perform sound action, if not then return nothing 
+            // console.log(questionListing);
+            // console.log(choiceOne);
+            // console.log(choiceTwo);
+            // console.log(choiceThree);
+            // console.log(choiceFour);
      // }
     })
 
 }
 
+
+function changeColor(buttonClicks) {
+    btn.style.backgroundColor = "green";
+}
 
 
 
@@ -167,3 +185,6 @@ function startGame() {
     }
 
  startButton.addEventListener("click", startGame());
+
+ //NEEDED
+ //-high Score, final score, option to choose when answer is right or wrong, need counter to decrement with incorrect answer
