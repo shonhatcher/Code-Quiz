@@ -11,17 +11,17 @@ var i = 1;
 
 
 //Questions and Choices
-var question = document.querySelector("#question");
-var choices = Array.from(document.querySelectorAll(".choice-text"));
+//var question = document.querySelector("#question");
+//var choices = Array.from(document.querySelectorAll(".choice-text"));
 
 var timer;
-var timerCount;
-var currentQuestion = {};
-var acceptingAnswers = true;
+var timerCount = 30;
+//var currentQuestion = {};
+//var acceptingAnswers = true;
 var score = 0;
-var availableQuestions = [];
+//var availableQuestions = [];
 const Score_Points = 100;
-const Max_Questions= 5;
+//const Max_Questions= 5;
 
 var questionArray = [
     {
@@ -68,6 +68,7 @@ var questionArray = [
 ]
 
 function startGame() {
+    startTimer();
     questionListing.innerText = questionArray[0].question;
     choiceOne.innerText = questionArray[0].choice1;
     choiceTwo.innerText = questionArray[0].choice2;
@@ -104,9 +105,6 @@ function startGame() {
 // function startGame() {
 //     timerCount = 60;
 //     score = 0;
-//     availableQuestions = [...questions];
-//     getNewQuestion ();
-//     // renderBlanks()
 //     startTimer()
 // }
 
@@ -146,11 +144,11 @@ function startGame() {
 //     })
 // })
 
-// function startTimer() {
+    function startTimer() {
 //     // Sets timer
-//     timer = setInterval(function() {
-//       timerCount--;
-//       timerElement.textContent = timerCount;
+        timer = setInterval(function() {
+        timerCount--;
+        timerElement.textContent = timerCount;
 //     //   if (timerCount >= 0) {
 //     //     // Tests if win condition is met
 //     //     if (isWin && timerCount > 0) {
@@ -165,7 +163,7 @@ function startGame() {
 //     //     clearInterval(timer);
 //     //     loseGame();
 //     //   }
-//     }, 1000);
-//   }
+        }, 1000);
+    }
 
  startButton.addEventListener("click", startGame());
